@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#search-bar {
+    width: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.content-container {
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-container {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.movie-card {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.movie-card img {
+    width: 100%;
+    display: block;
+}
+
+.movie-card h3 {
+    text-align: center;
+    padding: 10px;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 20px;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.categories,
+.top-posts,
+.advertisement {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 1200px) {
+    .movie-card {
+        width: calc(20% - 20px);
+        /* 5 cards in a row */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .movie-card {
+        width: calc(33.3333% - 20px);
+        /* 3 cards in a row */
+    }
+}
+
+@media (max-width: 767px) {
+    .movie-card {
+        width: calc(100% - 20px);
+        /* 1 card in a row */
+    }
+
+    .content-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
